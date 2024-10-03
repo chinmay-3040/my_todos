@@ -1,0 +1,32 @@
+<!-- <ul>
+    <li *ngFor="let todo of todos">
+        {{todo.sno}} - {{todo.title}} - {{todo.desc}} - {{todo.active}}
+    </li>
+</ul> -->
+
+<!-- 
+<div *ngFor="let todo of todos">
+    <app-todo-item ></app-todo-item>
+</div> -->
+
+<div style=" background-color: #DDCBE7; margin: 0px; padding: 20px;">
+    <!-- <h3 class="text-center"></h3> -->
+
+<app-add-todo (todoAdd)="function_to_Add_todo($event)" ></app-add-todo>
+
+
+<h4 class="container" style="margin-left: 60px; margin-top: 100px;color: rgba(95,0,103,1)"> Here are your tasks..</h4>
+<div class="container">
+    <div *ngIf="this.todos.length===0; else elseBlock" >
+        <p>No tasks to display..</p>
+    </div>
+  <ng-template #elseBlock >
+    <div *ngFor="let todo of todos; index as i">
+        <app-todo-item [todo]="todo" [i]="i" (todoDelete)="function_to_Delete_todo($event)" (todoCheckBox)="function_to_toggle($event)" ></app-todo-item>
+    </div>
+  </ng-template>
+</div>
+
+</div>
+
+

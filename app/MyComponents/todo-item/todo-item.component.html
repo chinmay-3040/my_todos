@@ -1,0 +1,14 @@
+
+<div class="container2" style='border:1px solid black;padding:10px; border-radius: 10px; width: 520px; margin: 10px;'>
+    <h4 [ngClass]="{'strike': !todo.active}" style="color: #DDCBE7;">{{todo.title}}</h4>
+    <p [ngClass]="{'strike': !todo.active}" style="color: #DDCBE7;">{{todo.desc}}</p>
+    <div class="form-check my-3">
+        <input type="checkbox" class="form-check-input" id="index{{i}}" (click)="onCheckboxClick(todo)" [checked]="!todo.active">
+        <label class="form-check-label" for="index{{i}}" style="color: #DDCBE7;">Toggle done</label>
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+        <img  (click)="onClick(todo)" src="../../../assets/delete.png" style="width: 25px;">
+        <img (click)="onImageClick()" [src]="currentImagePath" style="width: 30px;">
+    </div>
+        
+</div>

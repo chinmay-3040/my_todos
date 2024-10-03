@@ -1,0 +1,19 @@
+
+<!-- #DDCBE7 -->
+<!-- #F9E1F9 -->
+<div class="container col-sm-5 col-md-6" style="border: 1px solid rgba(95,0,103,1); border-radius: 10px; padding:20px; background-color: #DDCBE7">
+    <h4 style="color: rgba(95,0,103,1)">Add tasks</h4>
+   <form (ngSubmit)="onSubmit()">
+        <div class="form-group my-3">
+            <label for="title" style="color: rgba(95,0,103,1)">Todo title</label>
+            <input type="text" [(ngModel)]="title" class="form-control" id="title" name="title" aria-describedby="emailHelp" placeholder="title">
+        </div>
+        <div class="form-group my-3">
+            <label for="desc" style="color: rgba(95,0,103,1)">Description</label>
+            <textarea type="text" [(ngModel)]="desc" class="form-control" id="desc" name="desc" placeholder="description"></textarea>
+        </div>
+        
+        <!-- <img type="submit" src="../../../assets/plus.png"> -->
+        <button type="submit" style="font-size:20px; background-color: #DDCBE7; border: 0.5px solid black ; border-radius: 5px;"  >➕</button>
+    </form>
+</div>

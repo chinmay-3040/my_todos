@@ -1,0 +1,12 @@
+.strike{
+    text-decoration: line-through;
+}
+
+.container2{
+    background: linear-gradient(90deg, rgba(14,0,15,1)  0%, rgba(95,0,103,1)100%);
+    padding: 20px; /* Add padding to provide space around the content */
+  border-radius: 10px; /* Add border-radius for rounded corners */
+  margin: 10px; /* Add margin to provide space between items */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add box shadow for depth effect */
+  color: #fff; /* Set text color to white for better contrast */
+}
